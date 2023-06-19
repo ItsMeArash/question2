@@ -10,6 +10,8 @@ const validate = (data) => {
 
     if (!data.birthDate) {
         errors.birthDate = 'Birth date is required';
+    } else if (!/^13(0[0-2]|[0-9][0-9])\/(0?[1-9]|1[0-2])\/((0?[1-9])|([12][0-9])|(3[01]))$/.test(data.birthDate)) {
+        errors.birthDate = 'Birth date must be in range 1300/01/01 to 1402/04/29';
     }
 
     if (!data.password) {
