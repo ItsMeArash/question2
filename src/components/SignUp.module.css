@@ -33,7 +33,7 @@ label {
   display: block;
 }
 
-.signupForm input {
+input {
   outline: none;
   border: none;
   background-color: #d3d3d335;
@@ -42,15 +42,15 @@ label {
 }
 
 
-.signupForm input:focus::placeholder {
+input:focus::placeholder {
   opacity: 50%;
   transition: all 0.5s ease;
 }
-.signupForm input:not(:focus)::placeholder {
+input:not(:focus)::placeholder {
   transition: all 0.5s ease;
 }
 
-.signupForm button {
+button {
   outline: none;
   cursor: pointer;
   border: 1px solid rgb(42, 115, 147);
@@ -63,7 +63,7 @@ label {
   font-size: 1rem;
 }
 
-.signupForm button:hover {
+button:hover {
   transform: translateY(-2px);
   transition: all 0.3s ease;
   box-shadow: 3px 3px 3px -1px rgba(66, 66, 66, 0.5);
@@ -71,10 +71,10 @@ label {
   -moz-box-shadow: 3px 3px 3px -1px rgba(66, 66, 66, 0.5);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
-.signupForm button:not(:hover) {
+button:not(:hover) {
     transition: all 0.3s ease;
 }
 
-.signupForm button:active {
+button:active {
     transform: translateY(1px);
 }

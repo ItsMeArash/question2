@@ -21,9 +21,7 @@ const SignUp = () => {
   const dispatch = useDispatch();
 
   const editHandler = () => {
-    if (isSignedUp) {
       navigate("/dashboard");
-    }
   };
 
   const submitHandler = (event) => {
@@ -31,7 +29,9 @@ const SignUp = () => {
     setErrors(validate(data));
   };
 
-useEffect(() => { setIsSignedUp(false) }, [])
+  useEffect(() => {
+    setIsSignedUp(false);
+  }, []);
 
   useEffect(() => {
     if (Object.keys(errors).length === 0) {
@@ -67,7 +67,9 @@ useEffect(() => { setIsSignedUp(false) }, [])
             name="birthDate"
             placeholder="YYYY/MM/DD"
           ></input>
-          {errors.birthDate && <span className={styles.message}>{errors.birthDate}</span>}
+          {errors.birthDate && (
+            <span className={styles.message}>{errors.birthDate}</span>
+          )}
         </div>
 
         <div>
@@ -79,7 +81,9 @@ useEffect(() => { setIsSignedUp(false) }, [])
             name="password"
             placeholder="********"
           ></input>
-          {errors.password && <span className={styles.message}>{errors.password}</span>}
+          {errors.password && (
+            <span className={styles.message}>{errors.password}</span>
+          )}
         </div>
 
         <div>
@@ -91,7 +95,9 @@ useEffect(() => { setIsSignedUp(false) }, [])
             name="rePassword"
             placeholder="********"
           ></input>
-          {errors.rePassword && <span className={styles.message}>{errors.rePassword}</span>}
+          {errors.rePassword && (
+            <span className={styles.message}>{errors.rePassword}</span>
+          )}
         </div>
 
         <div>
@@ -103,7 +109,9 @@ useEffect(() => { setIsSignedUp(false) }, [])
             name="phone"
             placeholder="09123456789"
           ></input>
-          {errors.phone && <span className={styles.message}>{errors.phone}</span>}
+          {errors.phone && (
+            <span className={styles.message}>{errors.phone}</span>
+          )}
         </div>
         <button type="submit" onClick={(event) => submitHandler(event)}>
           Sign Up
